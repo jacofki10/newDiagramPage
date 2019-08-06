@@ -1,32 +1,32 @@
 
 //QUESTIONS ARRAY//
 export var CP = [
-  { questionNumber: "1", type: "CP", question: "会社の自分の机の上のものを断りなく使用されると、年甲斐もなく腹が立つ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
-  { questionNumber: "2", type: "CP", question: "飲食店で店員にされたオーダーミスはしばらく気になってしまう ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
-  { questionNumber: "3", type: "CP", question: "「あなたって～だね」などの断定、「それはダメ！」といった禁止言葉をよく使う ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
-  { questionNumber: "4", type: "CP", question: "この歳になると会社や部内の目標は達成することで初めて意味を成すものだと思う", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" }
+  { questionNumber: "1", type: "CP", question: "相手のミスがいつまでも気になる", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
+  { questionNumber: "2", type: "CP", question: "断りなく他人に自分の物を勝手に使われると腹が立つ ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
+  { questionNumber: "3", type: "CP", question: "人に貸したお金は額の大小関係なく、気になる ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
+  { questionNumber: "4", type: "CP", question: "お店の人にオーダーを間違えられると、しばらく気になる", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" }
 ]
 export var NP = [
-  { questionNumber: "1", type: "NP", question: "年齢のせいか、つい部下に対して手取り足取り、手厚くサポートしてしまう", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
-  { questionNumber: "2", type: "NP", question: "この歳になって後輩の成長を感じることが嬉しいと感じる ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
-  { questionNumber: "3", type: "NP", question: "自分が感動した映画やTV番組の話をするのが好きだ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
-  { questionNumber: "4", type: "NP", question: "料理や洗濯、掃除などの家事が好きだ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" }
+  { questionNumber: "1", type: "NP", question: "人の心配事にすぐ同情してしまう", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
+  { questionNumber: "2", type: "NP", question: "人の世話をしたいと思う ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
+  { questionNumber: "3", type: "NP", question: "人が困っているのを見ると助ける、または助けられないと気になる", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
+  { questionNumber: "4", type: "NP", question: "人に対する思いやりの気持ちが強い方だ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" }
 ]
 export var A = [
-  { questionNumber: "1", type: "A", question: "ネットニュースなどでは、まずソースを確認する", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
-  { questionNumber: "2", type: "A", question: "人付き合いは相互利益を重要視している ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
-  { questionNumber: "3", type: "A", question: "年齢も年齢なので出先で体調が悪いときは無理せず帰る", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
-  { questionNumber: "4", type: "A", question: "この歳で長い会議をするのは嫌いだ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" }
+  { questionNumber: "1", type: "A", question: "計画を立てるのが早い方だと思う", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
+  { questionNumber: "2", type: "A", question: "問題事が起きても、冷静に対処できる自信がある ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
+  { questionNumber: "3", type: "A", question: "物事を早くこなすのが得意な方だと思う", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
+  { questionNumber: "4", type: "A", question: "数字やデータ等の根拠にもとづいて話をする", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" }
 ]
 export var FC = [
-  { questionNumber: "1", type: "FC", question: "「いつも楽しそうだね」と言われることが多い", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
-  { questionNumber: "2", type: "FC", question: "今の年齢からでもまだ経験したことのない新しいチャレンジを仕事でしたい  ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
-  { questionNumber: "3", type: "FC", question: "打ち上げなどでノリがよく、自分の歳を忘れてハメを外すこともある ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
-  { questionNumber: "4", type: "FC", question: "「えっ！」や「本当ですか？」といった感嘆詞をよく使う", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" }
+  { questionNumber: "1", type: "FC", question: "人といる時、陽気にふるまう方だ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
+  { questionNumber: "2", type: "FC", question: "物事に対する好奇心が旺盛な方だ  ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
+  { questionNumber: "3", type: "FC", question: "大笑いをすることがよくある ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
+  { questionNumber: "4", type: "FC", question: "自分はハメを外したり、ノリのいい方だ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" }
 ]
 export var AC = [
-  { questionNumber: "1", type: "AC", question: "大勢に対するプレゼンテーションは苦手だ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
-  { questionNumber: "2", type: "AC", question: "大勢でいるときは目立たないポジションを探してしまう  ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
-  { questionNumber: "3", type: "AC", question: "今の年齢になってもなお自分の意見を押し通したことがない ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
-  { questionNumber: "4", type: "AC", question: "何歳になっても期待されたときは相手の期待に応えようと無理をする傾向がある", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" }
+  { questionNumber: "1", type: "AC", question: "人の言動や態度がかなり気になる", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
+  { questionNumber: "2", type: "AC", question: "思っていても口に出せないことが多い  ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
+  { questionNumber: "3", type: "AC", question: "相手が怒っていないか、怒るんじゃないか気になってしまう ", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" },
+  { questionNumber: "4", type: "AC", question: "他人が自分のことをどう思っているか、気になる", answer1: "はい", answer2: "どちらともいえない", answer3: "いいえ" }
 ]
