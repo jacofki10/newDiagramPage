@@ -10,12 +10,18 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = merge(common, {
   mode: "production",
   output: {
-    filename: "[name].[contentHash].js",
-    path: path.resolve(__dirname, "dist")
+    filename: "js/[name].[contentHash].js",
+    path: path.resolve(__dirname, "dist/common"),
+    // set static as src="static/main.js as relative path
+    publicPath: 'common/'
+
   },
   plugins: [
     new HtmlWebpackPlugin({
+      title: '',
+      filename: '../index.html',
       template: "./src/index.html",
+      hash: false,
       minify: {
         removeAttributeQuotes: true,
         collapseWhitespace: true,
@@ -23,8 +29,10 @@ module.exports = merge(common, {
       }
     }),
     new HtmlWebpackPlugin({
+      title: '',
+      filename: '../result.html',
       template: "./src/result.html",
-      filename: 'result.html',
+      hash: false,
       minify: {
         removeAttributeQuotes: true,
         collapseWhitespace: true,
@@ -32,7 +40,9 @@ module.exports = merge(common, {
       }
     }),
 
-    new MiniCssExtractPlugin({ filename: "[name].[contentHash].css" })
+    new MiniCssExtractPlugin({
+      filename: "css/[name].[contentHash].css"
+    })
   ],
   optimization: {
     minimizer:
