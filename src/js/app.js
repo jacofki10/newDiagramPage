@@ -19,25 +19,34 @@ export function setResult(type) {
 }
 
 //GET THE 20 QUESTIONS//
-function rand(sounceArray, destinationArray) {
-  var ran = sounceArray[Math.floor(Math.random() * sounceArray.length)];
-  if (destinationArray.indexOf(ran) == -1)
-    destinationArray.push(ran);
-  else
-    rand(sounceArray, destinationArray);
-}
-function randomSelect4(sounceArray) {
-  var destinationArray = [];
-  for (var i = 0; i < 4; i++) {
-    rand(sounceArray, destinationArray);
-  }
-  return destinationArray;
-}
-var CPselected = randomSelect4(CP);
-var NPselected = randomSelect4(NP);
-var Aselected = randomSelect4(A);
-var FCselected = randomSelect4(FC);
-var ACselected = randomSelect4(AC);
+//remove rondom
+// function rand(sounceArray, destinationArray) {
+//   var ran = sounceArray[Math.floor(Math.random() * sounceArray.length)];
+//   if (destinationArray.indexOf(ran) == -1)
+//     destinationArray.push(ran);
+//   else
+//     rand(sounceArray, destinationArray);
+// }
+// function randomSelect4(sounceArray) {
+//   var destinationArray = [];
+//   for (var i = 0; i < 4; i++) {
+//     rand(sounceArray, destinationArray);
+//   }
+//   return destinationArray;
+// }
+
+// var CPselected = randomSelect4(CP);
+// var NPselected = randomSelect4(NP);
+// var Aselected = randomSelect4(A);
+// var FCselected = randomSelect4(FC);
+// var ACselected = randomSelect4(AC);
+//remove random//
+
+var CPselected = CP;
+var NPselected = NP;
+var Aselected = A;
+var FCselected = FC;
+var ACselected = AC;
 var finalQuestions = CPselected.concat(NPselected, Aselected, FCselected, ACselected);
 
 var html = '';
