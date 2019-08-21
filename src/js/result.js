@@ -14,16 +14,16 @@ $("#tweet-this-post").click(function (event) {
 
 //Facebook button share
 
-// var li = document.getElementById('you_diagnosis').className;
-// alert(li);
+// var li = document.getElementById('you_diagnosis').className,
+//   style = li.currentStyle || window.getComputedStyle(img, false),
+//   bi = style.backgroundImage.slice(4, -1).replace(/"/g, "");
+// console.log(bi);
+var FacebookImg = $('#you_diagnosis').css('background-image');
+img = FacebookImg.replace(/(url\(|\)|")/g, '');
 
-// var name = $(result[pattern].ilustration).css('background-image');
-// console.log(name);
-// var image = li.style('background-image');
-// console.log(image);
 $("#fb_share_btn").click(function (event) {
   event.preventDefault();
-  window.open("https://www.facebook.com/dialog/feed?app_id=2344042465687322&display=page&redirect_uri=https://moshitabe.com/&picture=https://moshitabe.com/wp-content/uploads/2019/08/top_0103.jpg");
+  window.open("https://www.facebook.com/dialog/feed?app_id=2344042465687322&display=page&redirect_uri=https://moshitabe.com/&picture=" + FacebookImg + "");
 });
 $("#line-this-post").click(function (event) {
   event.preventDefault();
