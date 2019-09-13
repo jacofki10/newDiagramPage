@@ -13,15 +13,18 @@ $("#tweet-this-post").click(function (event) {
 });
 
 //Facebook button share
-var FacebookImg = $('#you_diagnosis').css('background-image');
-img = FacebookImg.replace(/(url\(|\)|")/g, '');
-$("#fb_share_btn").click(function (event) {
-  event.preventDefault();
-  window.open("https://www.facebook.com/dialog/feed?app_id=2344042465687322&display=page&redirect_uri=https://moshitabe.com/&picture=" + FacebookImg + "");
-});
+// var FacebookImg = $('#you_diagnosis').css('background-image');
+// img = FacebookImg.replace(/(url\(|\)|")/g, '');
+// $("#fb_share_btn").click(function (event) {
+//   event.preventDefault();
+//   window.open("https://www.facebook.com/dialog/feed?app_id=2344042465687322&display=page&redirect_uri=https://moshitabe.com/&picture=" + FacebookImg + "");
+// });
 
 //Line button share
 $("#line-this-post").click(function (event) {
   event.preventDefault();
   window.open("https://social-plugins.line.me/lineit/share?url=https://moshitabe.com/&text=" + result[pattern].typeName + "");
 });
+
+var url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + result[pattern].typeName + '&amp;size=500x500';
+$('#barcode').attr('src', url);

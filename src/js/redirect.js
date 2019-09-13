@@ -32,7 +32,7 @@ export function nextQuestion(currentNo) {
       case "44433":
       case "44434":
       case "44443":
-      case "44444": setResult(1); break;
+      case "44444": setResult(0); break;
       //パターン6
       case "13331":
       case "13332":
@@ -66,7 +66,7 @@ export function nextQuestion(currentNo) {
       case "24432":
       case "24441":
       case "24442":
-      case "34442": setResult(6); break;
+      case "34442": setResult(5); break;
       //パターン7
       case "13311":
       case "13312":
@@ -98,7 +98,7 @@ export function nextQuestion(currentNo) {
       case "24411":
       case "24412":
       case "24421":
-      case "24422": setResult(7); break;
+      case "24422": setResult(6); break;
       //パターン27
       case "33331":
       case "33332":
@@ -129,7 +129,7 @@ export function nextQuestion(currentNo) {
       case "44431":
       case "44432":
       case "44441":
-      case "44442": setResult(27); break;
+      case "44442": setResult(26); break;
       //パターン29
       case "33311":
       case "33312":
@@ -163,7 +163,7 @@ export function nextQuestion(currentNo) {
       case "44412":
       case "44421":
       case "44422":
-      case "44423": setResult(29); break;
+      case "44423": setResult(28); break;
       //パターン2
       case "33333":
       case "33334":
@@ -179,7 +179,7 @@ export function nextQuestion(currentNo) {
       case "43334":
       case "43343":
       case "43433":
-      case "44333": setResult(2); break;
+      case "44333": setResult(1); break;
       //パターン3
       case "11111":
       case "11112":
@@ -212,7 +212,7 @@ export function nextQuestion(currentNo) {
       case "22211":
       case "22212":
       case "22221":
-      case "22222": setResult(3); break;
+      case "22222": setResult(2); break;
       //パターン4
       case "13131":
       case "13132":
@@ -245,7 +245,7 @@ export function nextQuestion(currentNo) {
       case "24231":
       case "24232":
       case "24241":
-      case "24242": setResult(4); break;
+      case "24242": setResult(3); break;
       //パターン8
       case "11331":
       case "11332":
@@ -278,7 +278,7 @@ export function nextQuestion(currentNo) {
       case "22431":
       case "22432":
       case "22441":
-      case "22442": setResult(8); break;
+      case "22442": setResult(7); break;
       //パターン21
       case "11131":
       case "11132":
@@ -311,7 +311,7 @@ export function nextQuestion(currentNo) {
       case "22231":
       case "22232":
       case "22241":
-      case "22242": setResult(21); break;
+      case "22242": setResult(20); break;
       //パターン23
       case "13333":
       case "13334":
@@ -344,7 +344,7 @@ export function nextQuestion(currentNo) {
       case "24433":
       case "24434":
       case "24443":
-      case "24444": setResult(23); break;
+      case "24444": setResult(22); break;
       //パターン30
       case "11333":
       case "11334":
@@ -377,7 +377,7 @@ export function nextQuestion(currentNo) {
       case "22433":
       case "22434":
       case "22443":
-      case "22444": setResult(30); break;
+      case "22444": setResult(29); break;
       //パターン18
       case "31111":
       case "31112":
@@ -410,7 +410,7 @@ export function nextQuestion(currentNo) {
       case "42211":
       case "42212":
       case "42221":
-      case "42222": setResult(18); break;
+      case "42222": setResult(17); break;
       //パターン24
       case "31333":
       case "31334":
@@ -443,7 +443,7 @@ export function nextQuestion(currentNo) {
       case "42433":
       case "42434":
       case "42443":
-      case "42444": setResult(24); break;
+      case "42444": setResult(23); break;
       //パターン28
       case "33111":
       case "33112":
@@ -476,7 +476,7 @@ export function nextQuestion(currentNo) {
       case "44211":
       case "44212":
       case "44221":
-      case "44222": setResult(28); break;
+      case "44222": setResult(27); break;
       //パターン16
       case "31131":
       case "31132":
@@ -525,7 +525,7 @@ export function nextQuestion(currentNo) {
       case "42341":
       case "42342":
       case "42441":
-      case "42442": setResult(16); break;
+      case "42442": setResult(15); break;
       //パターン17
       case "32131":
       case "32132":
@@ -566,7 +566,7 @@ export function nextQuestion(currentNo) {
       case "44231":
       case "44232":
       case "44241":
-      case "44242": setResult(17); break;
+      case "44242": setResult(16); break;
       //パターン11
       case "23113":
       case "23114":
@@ -601,7 +601,7 @@ export function nextQuestion(currentNo) {
       case "44213":
       case "44214":
       case "44223":
-      case "44224": setResult(11); break;
+      case "44224": setResult(10); break;
       //パターン12
       case "13123":
       case "13124":
@@ -642,7 +642,7 @@ export function nextQuestion(currentNo) {
       case "24233":
       case "24234":
       case "24243":
-      case "24244": setResult(12); break;
+      case "24244": setResult(11); break;
       //パターン13
       case "13113":
       case "13114":
@@ -690,7 +690,7 @@ export function nextQuestion(currentNo) {
       case "24413":
       case "24414":
       case "24423":
-      case "24424": setResult(13); break;
+      case "24424": setResult(12); break;
       //パターン19
       case "13111":
       case "13112":
@@ -724,7 +724,7 @@ export function nextQuestion(currentNo) {
       case "24212":
       case "24221":
       case "24222":
-      case "34332": setResult(19); break;
+      case "34332": setResult(18); break;
       //パターン26
       case "33313":
       case "33314":
@@ -755,7 +755,7 @@ export function nextQuestion(currentNo) {
       case "44324":
       case "44413":
       case "44414":
-      case "44424": setResult(26); break;
+      case "44424": setResult(25); break;
       //パターン5
       case "31313":
       case "31314":
@@ -788,7 +788,7 @@ export function nextQuestion(currentNo) {
       case "42413":
       case "42414":
       case "42423":
-      case "42424": setResult(5); break;
+      case "42424": setResult(4); break;
       //パターン9
       case "31113":
       case "31114":
@@ -821,7 +821,7 @@ export function nextQuestion(currentNo) {
       case "42213":
       case "42214":
       case "42223":
-      case "42224": setResult(9); break;
+      case "42224": setResult(8); break;
       //パターン14
       case "11313":
       case "11314":
@@ -862,7 +862,7 @@ export function nextQuestion(currentNo) {
       case "23413":
       case "23414":
       case "23423":
-      case "23424": setResult(14); break;
+      case "23424": setResult(13); break;
       //パターン22
       case "11113":
       case "11114":
@@ -896,7 +896,7 @@ export function nextQuestion(currentNo) {
       case "22214":
       case "22223":
       case "22224":
-      case "33324": setResult(22); break;
+      case "33324": setResult(21); break;
       //パターン31
       case "11133":
       case "11134":
@@ -929,7 +929,7 @@ export function nextQuestion(currentNo) {
       case "22233":
       case "22234":
       case "22243":
-      case "22244": 31
+      case "22244": setResult(30); break;
       //パターン15
       case "31311":
       case "31312":
@@ -970,7 +970,7 @@ export function nextQuestion(currentNo) {
       case "42421":
       case "42422":
       case "42431":
-      case "42432": setResult(15); break;
+      case "42432": setResult(14); break;
       //パターン20
       case "11311":
       case "11312":
@@ -1003,7 +1003,7 @@ export function nextQuestion(currentNo) {
       case "22411":
       case "22412":
       case "22421":
-      case "22422": setResult(20); break;
+      case "22422": setResult(19); break;
       //パターン10
       case "31133":
       case "31134":
@@ -1036,7 +1036,7 @@ export function nextQuestion(currentNo) {
       case "42233":
       case "42234":
       case "42243":
-      case "42244": setResult(10); break;
+      case "42244": setResult(9); break;
       //パターン25
       case "33133":
       case "33134":
@@ -1069,7 +1069,7 @@ export function nextQuestion(currentNo) {
       case "44233":
       case "44234":
       case "44243":
-      case "44244": setResult(25); break;
+      case "44244": setResult(24); break;
     }
     return false;
   }
