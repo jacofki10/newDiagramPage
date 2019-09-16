@@ -26,5 +26,19 @@ $("#line-this-post").click(function (event) {
   window.open("https://social-plugins.line.me/lineit/share?url=https://moshitabe.com/&text=" + result[pattern].typeName + "");
 });
 
-var url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + result[pattern].typeName + '&amp;size=500x500';
-$('#barcode').attr('src', url);
+
+//qrcode
+
+var QRCode = require('qrcode')
+var canvas = document.getElementById('canvas')
+ 
+QRCode.toCanvas(canvas, 'sample text', {
+  color: {
+    dark: '#00F',  // Blue dots
+    light: '#0000', // Transparent background
+    scale: '5'
+  }
+}, function (error) {
+  if (error) console.error(error)
+  console.log('success!');
+})
