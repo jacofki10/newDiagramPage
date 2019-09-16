@@ -19,7 +19,6 @@
       -khtml-opacity: 0.7;
       opacity: 0.7;
       z-index: 100;
-      display: none;
     }
 
     .cnt223 a {
@@ -73,28 +72,7 @@
       cursor: pointer;
     }
   </style>
-  <script type='text/javascript'>
-    $(function () {
-      var overlay = $('<div id="overlay"></div>');
-      overlay.show();
-      overlay.appendTo(document.body);
-      $('.popup').show();
-      $('.close').click(function () {
-        $('.popup').hide();
-        overlay.appendTo(document.body).remove();
-        return false;
-      });
 
-
-
-
-      $('.x').click(function () {
-        $('.popup').hide();
-        overlay.appendTo(document.body).remove();
-        return false;
-      });
-    });
-  </script>
 </head>
 
 <body>
@@ -102,12 +80,12 @@
     <div class='popup'>
       <div class='cnt223'>
         <h1>コードを入れてください</h1>
-        <p>
-          <textarea cols="50" rows="2" maxlength="20" placeholder="Just 10 characters allowed"></textarea>
+        <form name="form1">
+          <input type="text" name="user1"  maxlength="10" placeholder="Just 10 characters allowed">
           <br />
           <br />
           <button type="button" class='close'>Click Me!</button>
-        </p>
+        </form>
       </div>
     </div>
     <form name="ResultForm" method="post" id="form_id">

@@ -12,13 +12,47 @@ import { AC } from "./questions";
 import { nextQuestion } from "./redirect";
 import "./../css/style.scss";
 
-//IINSERT DATA IN RESULT.HTML
+// POP UP WINDOW //
+var expireAt = new Date;
+expireAt.setMonth(expireAt.getMonth() + 3);
+var code = "";
+
+function makeCookie()
+{
+code = document.form1.user1.value;
+document.cookie = "code=" + code + ";expires=" + expireAt.toGMTString()
+}
+
+if (document.cookie.split(';').filter((item) => item.trim().startsWith('code=')).length) {
+  console.log('The cookie "code" exists');
+} else{
+  $(function () {
+    var overlay = $('<div id="overlay"></div>');
+    overlay.show();
+    overlay.appendTo(document.body);
+    $('.popup').show();
+    $('.close').click(function () {
+      makeCookie();
+      $('.popup').hide();
+      overlay.appendTo(document.body).remove();
+      return false;
+    });
+    $('.x').click(function () {
+      $('.popup').hide();
+      overlay.appendTo(document.body).remove();
+      return false;
+    });
+  });
+}
+
+
+// IINSERT DATA IN RESULT.HTML //
 export function setResult(type) {
   localStorage.setItem('Pattern', type);
   window.location.href = "result.html";
 }
 
-//GET THE 20 QUESTIONS//
+// GET THE 20 QUESTIONS//
 //remove rondom
 // function rand(sounceArray, destinationArray) {
 //   var ran = sounceArray[Math.floor(Math.random() * sounceArray.length)];
@@ -63,7 +97,7 @@ for (var i = 0; i < finalQuestions.length; i++) {
   html += "<div class='answer3'>" + finalQuestions[i].answer3 + "</div>";
   html += "</div>";
 }
-document.getElementById("data_area").innerHTML = html;
+$('#data_area').html(html);
 
 //SHOW THE QUESTIONS IN THE QUIZ ORDERLY//
 export const MAX_QUESTION_NO = 20;
@@ -78,7 +112,7 @@ var $qProgressBar = $('#q_progress_bar');
 var $qProgressNo = $('#q_progress_no');
 export var scoreData = [];
 var List = [];
-var user = [];
+//var user = [];
 
 function init() {
   $('.diaguramu_data').each(function () {
@@ -158,5 +192,7 @@ $("#q_answer3").click(function () {
 //user.push(q_no, main_no, finalanswer);
 //console.log(user);
 //}
+
+
 init();
 
