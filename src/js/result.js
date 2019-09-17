@@ -1,5 +1,6 @@
 import { result } from "./answers";
 var pattern = localStorage.getItem('Pattern');
+import "./../css/style.scss";
 
 document.getElementById("you_diagnosis").classList.add(result[pattern].ilustration);
 document.getElementById("typeName").innerHTML = result[pattern].typeName;
@@ -26,19 +27,21 @@ $("#line-this-post").click(function (event) {
   window.open("https://social-plugins.line.me/lineit/share?url=https://moshitabe.com/&text=" + result[pattern].typeName + "");
 });
 
-
 //qrcode
+var QRCode = require('qrcode');
+var canvas = document.getElementById('canvas');
 
-var QRCode = require('qrcode')
-var canvas = document.getElementById('canvas')
- 
-QRCode.toCanvas(canvas, 'sample text', {
+QRCode.toCanvas(canvas, 'https://sky-link.co.jp/', {
   color: {
-    dark: '#00F',  // Blue dots
-    light: '#0000', // Transparent background
-    scale: '5'
-  }
+    dark: '#000000',  // Black dots
+    light: '#0000' // Transparent background
+  },
+  width: 400,
+  margin: 6,
+  scale: 6
 }, function (error) {
   if (error) console.error(error)
   console.log('success!');
 })
+
+$("#testCode").text(document.cookie);

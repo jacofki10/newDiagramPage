@@ -21,6 +21,7 @@ module.exports = merge(common, {
       title: '',
       filename: '../index.html',
       template: "./src/index.html",
+      chunks: ['main'],
       hash: false,
       minify: {
         removeAttributeQuotes: true,
@@ -32,6 +33,7 @@ module.exports = merge(common, {
       title: '',
       filename: '../result.html',
       template: "./src/result.html",
+      chunks: ['result'],
       hash: false,
       minify: {
         removeAttributeQuotes: true,
@@ -39,10 +41,10 @@ module.exports = merge(common, {
         removeComments: true
       }
     }),
-
     new MiniCssExtractPlugin({
       filename: "css/[name].[contentHash].css"
-    })
+    }),
+    new CleanWebpackPlugin()
   ],
   optimization: {
     minimizer:

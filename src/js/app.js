@@ -17,15 +17,13 @@ var expireAt = new Date;
 expireAt.setMonth(expireAt.getMonth() + 3);
 var code = "";
 
-function makeCookie()
-{
-code = document.form1.user1.value;
-document.cookie = "code=" + code + ";expires=" + expireAt.toGMTString()
+function makeCookie() {
+  code = $('#user1').val();
+  document.cookie = "code=" + code + ";expires=" + expireAt.toGMTString()
 }
-
 if (document.cookie.split(';').filter((item) => item.trim().startsWith('code=')).length) {
   console.log('The cookie "code" exists');
-} else{
+} else {
   $(function () {
     var overlay = $('<div id="overlay"></div>');
     overlay.show();
@@ -44,7 +42,6 @@ if (document.cookie.split(';').filter((item) => item.trim().startsWith('code='))
     });
   });
 }
-
 
 // IINSERT DATA IN RESULT.HTML //
 export function setResult(type) {
