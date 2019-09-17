@@ -12,7 +12,7 @@ import { AC } from "./questions";
 import { nextQuestion } from "./redirect";
 import "./../css/style.scss";
 
-// POP UP WINDOW //
+// POP UP WINDOWCREATE CODE COOKIE //
 var expireAt = new Date;
 expireAt.setMonth(expireAt.getMonth() + 3);
 var code = "";
@@ -45,7 +45,9 @@ if (document.cookie.split(';').filter((item) => item.trim().startsWith('code='))
 
 // IINSERT DATA IN RESULT.HTML //
 export function setResult(type) {
+  console.log(scoreData);
   localStorage.setItem('Pattern', type);
+  console.log(scoreData);
   window.location.href = "result.html";
 }
 
@@ -91,20 +93,20 @@ for (var i = 0; i < finalQuestions.length; i++) {
   html += "<div class='question'>" + finalQuestions[i].question + "</div>";
   html += "<div class='answer1'>" + finalQuestions[i].answer1 + "</div>";
   html += "<div class='answer2'>" + finalQuestions[i].answer2 + "</div>";
-  html += "<div class='answer3'>" + finalQuestions[i].answer3 + "</div>";
+  // html += "<div class='answer3'>" + finalQuestions[i].answer3 + "</div>";
   html += "</div>";
 }
 $('#data_area').html(html);
 
 //SHOW THE QUESTIONS IN THE QUIZ ORDERLY//
-export const MAX_QUESTION_NO = 20;
-const MAX_TYPE_SCORE = 8;
+export const MAX_QUESTION_NO = 10;
+const MAX_TYPE_SCORE = 3;
 var $qNo = $('#q_no');
 var $TotalNo = $('#total_no');
 var $question = $('#question');
 var $qAnswer1 = $('#q_answer1');
 var $qAnswer2 = $('#q_answer2');
-var $qAnswer3 = $('#q_answer3');
+//var $qAnswer3 = $('#q_answer3');
 var $qProgressBar = $('#q_progress_bar');
 var $qProgressNo = $('#q_progress_no');
 export var scoreData = [];
@@ -120,14 +122,14 @@ function init() {
     var Question = $('.question', $this).text();
     var Answer1 = $('.answer1', $this).text();
     var Answer2 = $('.answer2', $this).text();
-    var Answer3 = $('.answer3', $this).text();
+    // var Answer3 = $('.answer3', $this).text();
     List[No] = {
       'Type': Type,
       'TotalNumber': TotalNumber,
       'Question': Question,
       'Answer1': Answer1,
       'Answer2': Answer2,
-      'Answer3': Answer3
+      // 'Answer3': Answer3
     };
     scoreData[Type] = 0;
   });
@@ -144,15 +146,15 @@ export function setupQuestion(no) {
   $('a', $qAnswer2).text(List[no].Answer2);
   $qAnswer2.data('type', List[no].Type);
   $qAnswer2.data('no', no);
-  $('a', $qAnswer3).text(List[no].Answer3);
-  $qAnswer3.data('type', List[no].Type);
-  $qAnswer3.data('no', no);
+  //$('a', $qAnswer3).text(List[no].Answer3);
+  //$qAnswer3.data('type', List[no].Type);
+  //$qAnswer3.data('no', no);
   $qProgressNo.text(no);
   $qProgressBar.text(no);
 }
 
 //ON CLICK ACTION / /
-function clickAnswer(saveInArray, number, type, currentNo) {
+function clickAnswer(number, type, currentNo) {
   //SaveinArray(saveInArray);
   if (MAX_TYPE_SCORE <= scoreData[type]) {
     return;
@@ -166,30 +168,34 @@ function clickAnswer(saveInArray, number, type, currentNo) {
 $("#q_answer1").click(function () {
   var currentNo = $(this).data('no');
   var type = $(this).data('type');
-  clickAnswer('A', 2, type, currentNo)
+  clickAnswer(1, type, currentNo)
+  console.log(type);
+  console.log(scoreData);
 });
 
 $("#q_answer2").click(function () {
   var currentNo = $(this).data('no');
   var type = $(this).data('type');
-  clickAnswer('B', 1, type, currentNo)
+  clickAnswer(0, type, currentNo)
+  console.log(type);
+  console.log(scoreData);
 });
 
-$("#q_answer3").click(function () {
-  var currentNo = $(this).data('no');
-  var type = $(this).data('type');
-  clickAnswer('C', 0, type, currentNo)
-});
+//$("#q_answer3").click(function () {
+// var currentNo = $(this).data('no');
+// var type = $(this).data('type');
+// clickAnswer('C', 0, type, currentNo)
+//});
 
-//Save answer in and array and show in console( just for testing)//
-//function SaveinArray(answer) {
-//var q_no = $("#q_no").text();
-//var main_no = $("#total_no").text();
-// var finalanswer = (answer);
-//user.push(q_no, main_no, finalanswer);
-//console.log(user);
-//}
-
+//Save answer in and array and show in console(just for testing)//
+// function SaveinArray(answer) {
+//   console.log(scoreData);
+//   var q_no = $("#q_no").text();
+//   var main_no = $("#total_no").text();
+//   var finalanswer = (answer);
+//   user.push(q_no, main_no, finalanswer);
+//   console.log(user);
+// }
 
 init();
 
